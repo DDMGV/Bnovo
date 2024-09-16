@@ -1,0 +1,356 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Guest doc API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/": {},
+        "/api/guests": {
+            "get": {
+                "tags": [
+                    "Guest"
+                ],
+                "summary": "Получение списка гостей",
+                "operationId": "81296a35297816091d905086d5d18bba",
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "John"
+                                        },
+                                        "surname": {
+                                            "type": "string",
+                                            "example": "Smith"
+                                        },
+                                        "phone": {
+                                            "type": "string",
+                                            "example": "7 9999999999"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "JohnSmith@gmail.com"
+                                        },
+                                        "country_id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "created_at": {
+                                            "type": "date-time",
+                                            "example": "2024-09-15 13:17:35"
+                                        },
+                                        "updated_at": {
+                                            "type": "date-time",
+                                            "example": "2024-09-15 13:17:35"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Guest"
+                ],
+                "summary": "Создание гостя",
+                "operationId": "6ae7ed6c84ab2e5d35d30ced7e72867a",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "John"
+                                            },
+                                            "surname": {
+                                                "type": "string",
+                                                "example": "Smith"
+                                            },
+                                            "phone": {
+                                                "description": "Номер телефона в формате <Код_страны> . <Пробел> . <Номер телефона>",
+                                                "type": "string",
+                                                "example": "7 9999999999"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "example": "JohnSmith@gmail.com"
+                                            },
+                                            "country_id": {
+                                                "type": "integer",
+                                                "example": 1
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "John"
+                                        },
+                                        "surname": {
+                                            "type": "string",
+                                            "example": "Smith"
+                                        },
+                                        "phone": {
+                                            "type": "string",
+                                            "example": "7 9999999999"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "JohnSmith@gmail.com"
+                                        },
+                                        "country_id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "created_at": {
+                                            "type": "date-time",
+                                            "example": "2024-09-15 13:17:35"
+                                        },
+                                        "updated_at": {
+                                            "type": "date-time",
+                                            "example": "2024-09-15 13:17:35"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/guests/{guest}": {
+            "get": {
+                "tags": [
+                    "Guest"
+                ],
+                "summary": "Получение гостя",
+                "operationId": "6807b614795611eaa28ba677d6cdec22",
+                "parameters": [
+                    {
+                        "name": "guest",
+                        "in": "path",
+                        "description": "Id гостя",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "John"
+                                        },
+                                        "surname": {
+                                            "type": "string",
+                                            "example": "Smith"
+                                        },
+                                        "phone": {
+                                            "type": "string",
+                                            "example": "7 9999999999"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "JohnSmith@gmail.com"
+                                        },
+                                        "country_id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "created_at": {
+                                            "type": "date-time",
+                                            "example": "2024-09-15 13:17:35"
+                                        },
+                                        "updated_at": {
+                                            "type": "date-time",
+                                            "example": "2024-09-15 13:17:35"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Guest"
+                ],
+                "summary": "Удаление гостя",
+                "operationId": "2290d22b7c8757a85eff6b4c6767cca5",
+                "parameters": [
+                    {
+                        "name": "guest",
+                        "in": "path",
+                        "description": "Id гостя",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully deleted",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Successfully deleted"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Guest"
+                ],
+                "summary": "Измение данных гостя",
+                "operationId": "661f7bc6513c89bf45e4acf09a4c54aa",
+                "parameters": [
+                    {
+                        "name": "guest",
+                        "in": "path",
+                        "description": "Id гостя",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "John"
+                                            },
+                                            "surname": {
+                                                "type": "string",
+                                                "example": "Smith"
+                                            },
+                                            "phone": {
+                                                "description": "Номер телефона в формате <Код_страны> . <Пробел> . <Номер телефона>",
+                                                "type": "string",
+                                                "example": "7 9999999999"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "example": "JohnSmith@gmail.com"
+                                            },
+                                            "country_id": {
+                                                "type": "integer",
+                                                "example": 1
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer",
+                                            "example": "1"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "John"
+                                        },
+                                        "surname": {
+                                            "type": "string",
+                                            "example": "Smith"
+                                        },
+                                        "phone": {
+                                            "type": "string",
+                                            "example": "7 9999999999"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "example": "JohnSmith@gmail.com"
+                                        },
+                                        "country_id": {
+                                            "type": "integer",
+                                            "example": 1
+                                        },
+                                        "created_at": {
+                                            "type": "integer",
+                                            "example": "2024-09-15 13:17:35"
+                                        },
+                                        "updated_at": {
+                                            "type": "integer",
+                                            "example": "2024-09-15 13:17:35"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Guest",
+            "description": "Guest"
+        }
+    ]
+}
