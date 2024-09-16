@@ -12,10 +12,19 @@
  Headers: { "key": "Accept", "value" : "application/json" }
    
    GET | http://localhost/api/guests/        | Получение всех гостей
+
+   
   POST | http://localhost/api/guests/        | Создание гостя  
+
+  
    GET | http://localhost/api/guests/{guest} | Получение гостя гостя по ID  
+
+   
  PATCH | http://localhost/api/guests/{guest} | Изменение гостя гостя по ID  
+
+ 
 DELETE | http://localhost/api/guests/{guest} | Удаление гостя гостя по ID  
+
 
 
 Body: | Для POST & PATCH 
