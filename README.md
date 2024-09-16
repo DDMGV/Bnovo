@@ -2,12 +2,14 @@
 2. docker-compose up -d
 3. cd src/guest-api
 4. composer install
-5. create database "laravel"
-6. docker exec -it bnovo-php-1 /bin/bash
-7. php artisan migrate
-8. php artisan db:seed
+5. go to http://localhost:9090/
+6. create database "laravel"
+7. thank you)
+8. docker exec -it bnovo-php-1 /bin/bash
+9. php artisan migrate
+10. php artisan db:seed
 
-9. Go to POSTMAN
+11. Go to POSTMAN
 
  Headers: { "key": "Accept", "value" : "application/json" }
    
