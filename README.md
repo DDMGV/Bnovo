@@ -2,7 +2,7 @@
 2. docker-compose up -d
 3. cd src/guest-api
 4. composer install
-5. go to http://localhost:9090/
+5. go to http://localhost:9090/ root root
 6. create database "laravel"
 7. thank you)
 8. docker exec -it bnovo-php-1 /bin/bash
